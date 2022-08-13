@@ -30,15 +30,11 @@ export const Menu = () => {
             </C.Categoria>
 
             <C.Categoria>
-                Promoções
-            </C.Categoria>
-
-            <C.Categoria>
                 Lançamentos
             </C.Categoria>
 
             <C.Categoria>
-                Pacotes
+                Blog
             </C.Categoria>
 
             <C.Cadastrar onClick={goToLogin}>

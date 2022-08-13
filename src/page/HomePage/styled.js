@@ -1,29 +1,67 @@
 import styled from 'styled-components'
 
+export const Banner = styled.div`
+    height: 100vh;
+    img{
+        width:100%;
+        height: 100vh;
+        object-fit:cover;
+    }
+`;
 
-export const Banner = styled.img`
+export const AboutUs = styled.section `
+    background-color: #1A152C;
     width:100%;
-    height:86vh;
-    border-bottom-left-radius:30px;
-    border-bottom-right-radius:30px;
-    object-fit:cover;
-`;
-
-export const Slider = styled.section `
-    position:relative;
-    top:-60px;
+    height:100vh;
     display:flex;
-    align-items:center;
-    justify-content:center;
+    justify-content: space-around;
+
 `;
 
-export const Planets = styled.img `
-    width:20vw;
-    height: 10vw;
-    border-radius:30px;
-    margin-left:20px;
-    object-fit:cover;
-    
+export const TextSection = styled.div `
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    h3{
+        color: #D20320;
+        font-size: 48px;
+        margin: 0;
+    }
+
+    p{
+        color: white;
+        font-weight: 400;
+    }
+`;
+
+export const ImageSection = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border:1px solid; */
+
+    img {
+        width: 30vw;
+        height: 30vw;
+    }
+`;
+
+export const ContainerViagens = styled.div `
+    background-color: #730119;
+    height:100vh;
+    display: flex;
+    flex-direction:column;
+    flex-wrap:wrap;
+
+    h3{
+        display: flex;
+        font-size: 40px;
+        color:white;
+        align-self:center;
+        margin: 30px;
+    }
 `;
 
 export const Container = styled.div`
@@ -32,15 +70,6 @@ export const Container = styled.div`
     justify-content: space-evenly;
 `;
 
-export const CardTrip = styled.div`
-    display:inline;
-    width: 200px;
-    height: 400px;
-    border: 1px solid;
-    margin-left:15px;
-    margin-bottom:15px;
-    /* margin-right:15px; */
 
-`;
 
 
