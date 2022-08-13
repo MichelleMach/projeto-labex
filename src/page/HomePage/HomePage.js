@@ -1,12 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import * as C from './styled'
 import { Menu } from '../../component/menu/Menu'
-import Foto from '../../assets/foguete.webp'
-import Marte from '../../assets/planeta-marte.webp'
-import Venus from '../../assets/planeta-venus.webp'
-import Plutao from '../../assets/planeta-plutao.webp'
-import Saturno from '../../assets/planeta-saturno.webp'
+import Banner from '../../assets/banner.jpg'
+import AboutUs from '../../assets/nebulosa.jpg'
 import axios from 'axios'
+import CardTrip from '../../component/cardTrip/CardTrip'
 
 export const HomePage = () => {
 
@@ -31,45 +29,40 @@ export const HomePage = () => {
 
   }
 
-
-
   return (
     <div>
       <Menu />
-      <C.Banner src={Foto} />
+      <C.Banner>
+        <img src={Banner} alt='Imagem-de-Astronauta-Banner' />
+      </C.Banner>
 
-      <C.Slider >
+      <C.AboutUs>
+        <C.TextSection>
+          <h3>ABOUT US</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+            labore et dolore magna aliqua. Sapien pellentesque habitant morbi tristique senectus et.
+          </p>
+          <button> SAIBA MAIS </button>
+        </C.TextSection>
 
-        <C.Planets src={Marte} />
+        <C.ImageSection>
+          <img src={AboutUs} alt='Imagem-Nebulosa' />
+        </C.ImageSection>
+      </C.AboutUs>
 
-        <C.Planets src={Venus} />
+      <C.ContainerViagens>
+        <h3>ÚLTIMAS VIAGENS</h3>
+        <C.Container>
+          {
+            trips.map((trip, indice) => {
 
-        <C.Planets src={Plutao} />
-
-        <C.Planets src={Saturno} />
-
-      </C.Slider>
-
-      <h3>ÚLTIMAS VIAGENS</h3>
-      <C.Container>
-        {
-          trips.map((trip, indice) => {
-
-            return (
-
-              <C.CardTrip key={indice}>
-                
-                <p>{trip.planet}</p>
-                <p>{trip.name}</p>
-                <p>{trip.description}</p>
-                <p>{trip.durationInDays}</p>
-                <p>{trip.date}</p>
-
-              </C.CardTrip>
-            )
-          })
-        }
-      </C.Container>
+              return (
+                <CardTrip trip={trip} key={indice} />
+              )
+            })
+          }
+        </C.Container>
+      </C.ContainerViagens>
     </div>
   )
 }
