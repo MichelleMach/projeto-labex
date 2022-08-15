@@ -56,7 +56,7 @@ export const ContainerViagens = styled.div `
     flex-wrap:wrap;
 
     h3{
-        display: flex;
+        display: block;
         font-size: 40px;
         color:white;
         align-self:center;
@@ -69,6 +69,22 @@ export const Container = styled.div`
     flex-wrap:wrap;
     justify-content: space-evenly;
 `;
+
+export const Button = styled.button`
+    width:238px;
+    height: 40px;
+    background-color: #1A152C;
+    border: none;
+    display: flex;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 18px;
+    font-weight:bold;
+    margin: 40px 10px 40px;
+    cursor:pointer;
+`
 
 
 

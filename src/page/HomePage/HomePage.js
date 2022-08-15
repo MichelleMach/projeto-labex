@@ -62,6 +62,8 @@ export const HomePage = () => {
             })
           }
         </C.Container>
+
+        <C.Button>MAIS VIAGENS</C.Button>
       </C.ContainerViagens>
     </div>
   )
