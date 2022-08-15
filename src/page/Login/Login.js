@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
 import { useNavigate } from "react-router-dom"
+import TextField from '@mui/material/TextField';
+import Box from '@mui/material/Box';
 import * as C from './styled'
-import Banner from '../../assets/galaxia2.jpg'
+
 import axios from 'axios'
 
 export const Login = () => {
@@ -39,30 +41,39 @@ export const Login = () => {
     return (
         <C.Container>
 
-            <C.ContainerEsquerda>
-                <C.Imagem src={Banner} />
-            </C.ContainerEsquerda>
-
-            <C.ContainerDireita>
+            <C.ContainerInfo>
 
                 <C.Titulo>LOGIN</C.Titulo>
 
-                <C.Input
-                    placeholder="Email"
-                    type="email"
-                    onChange={onChangeEmail}
-                    src={true}
-                />
+                <Box
+                    component="form"
+                    sx={{ '& > :not(style)': { m: 3, width: '40ch' }, }}
+                    noValidate
+                    autoComplete="off"
+                >
 
-                <C.Input
-                    placeholder="Password"
-                    type="password"
-                    onChange={onChangePassword}
-                />
+                    <TextField
+                        label='email'
+                        variant="outlined"
+                        type="email"
+                        onChange={onChangeEmail}
+                        // color='warning'
+                      
+                    />
 
-                <C.Button onClick={Login}>Enviar</C.Button>
+                    <TextField
+                        label='password'
+                        variant="outlined"
+                        type="password"
+                        onChange={onChangePassword}
+                        // color='primary'
+                      
+                    />
 
-            </C.ContainerDireita>
-        </C.Container>
+                </Box>
+                <C.Button onClick={Login}>ENTRAR</C.Button>
+
+            </C.ContainerInfo>
+        </C.Container >
     )
 }
